@@ -31,14 +31,31 @@ img {
 
 .item_task3 {
   list-style: none;
-  margin-right: 30px;
+
   transition: transform 250ms linear;
 }
+
+.item_task3:not(:last-child) {
+  margin-right: 30px;
+}
+
 .item_task3:hover {
-  transform: scale(1.2);
+  transform: scale(1.12);
 }
 
 .gallery {
   display: flex;
   justify-content: center;
+}
+
+#validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
 }

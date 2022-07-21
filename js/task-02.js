@@ -7,11 +7,16 @@ const ingredients = [
   "Condiments",
 ];
 
-const list = document.querySelector("#ingredients");
+const listRef = document.querySelector("#ingredients");
 
-const ingradient = ingredients.map((element) => {
-  const createLi = document.createElement("li");
-  createLi.textContent = element;
-  createLi.classList.add("item");
-  list.append(createLi);
-});
+const createItemRef = (options) => {
+  return options.map((option) => {
+    const createLi = document.createElement("li");
+    createLi.textContent = option;
+    createLi.classList.add("item");
+    return createLi;
+  });
+};
+
+const elements = createItemRef(ingredients);
+listRef.append(...elements);
