@@ -1,8 +1,10 @@
-const textInput = document.querySelector("#name-input");
-const output = document.querySelector("#name-output");
+const ref = {
+  textInput: document.querySelector("#name-input"),
+  output: document.querySelector("#name-output"),
+};
 
-textInput.addEventListener("input", (event) =>
-  textInput.value === ""
-    ? (output.textContent = "Anonymous")
-    : (output.textContent = event.currentTarget.value)
+ref.textInput.addEventListener("input", (event) =>
+  ref.textInput.value === ""
+    ? (ref.output.textContent = "Anonymous")
+    : (ref.output.textContent = event.currentTarget.value)
 );
