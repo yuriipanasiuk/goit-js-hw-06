@@ -29,17 +29,17 @@ img {
   border-radius: 15px;
 }
 
-.item_task3 {
+.gallery > li {
   list-style: none;
 
   transition: transform 250ms linear;
 }
 
-.item_task3:not(:last-child) {
+.gallery > li:not(:last-child) {
   margin-right: 30px;
 }
 
-.item_task3:hover {
+.gallery > li:hover {
   transform: scale(1.12);
 }
 

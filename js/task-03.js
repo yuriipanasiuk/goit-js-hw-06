@@ -18,7 +18,6 @@ const listRef = document.querySelector(".gallery");
 const makeGalery = (options) => {
   return options.map((option) => {
     const createLi = document.createElement("li");
-    createLi.classList.add("item_task3");
     createLi.insertAdjacentHTML(
       "afterbegin",
       `<img src="${option.url}" alt="${option.alt}">`

@@ -1,14 +1,14 @@
-const ref = {
+const refs = {
   body: document.querySelector("body"),
   button: document.querySelector(".change-color"),
   span: document.querySelector(".color"),
 };
 
-ref.button.addEventListener("click", changeBgColor);
+refs.button.addEventListener("click", changeBgColor);
 
 function changeBgColor() {
-  ref.body.style.backgroundColor = getRandomHexColor();
-  ref.span.textContent = getRandomHexColor();
+  refs.body.style.backgroundColor = getRandomHexColor();
+  refs.span.textContent = getRandomHexColor();
 }
 
 function getRandomHexColor() {

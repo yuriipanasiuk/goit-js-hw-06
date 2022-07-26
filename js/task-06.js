@@ -3,10 +3,10 @@ const textInputEl = document.querySelector("#validation-input");
 textInputEl.addEventListener("blur", onInputColor);
 
 function onInputColor() {
-  const corectLength = String(textInputEl.value.length);
-  const incorectLength = String(textInputEl.dataset.length);
+  const currentLength = String(textInputEl.value.length);
+  const corectLength = String(textInputEl.dataset.length);
 
-  return corectLength === incorectLength
+  return corectLength === currentLength
     ? textInputEl.classList.add("valid")
     : textInputEl.classList.add("invalid");
 }

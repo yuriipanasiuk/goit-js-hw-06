@@ -1,13 +1,13 @@
-const ref = {
+const refs = {
   inputValue: document.querySelector("#controls input"),
   createBtn: document.querySelector("[data-create]"),
   destroyBtn: document.querySelector("[data-destroy]"),
   boxesEl: document.querySelector("#boxes"),
 };
 
-ref.createBtn.addEventListener("click", createBoxes);
-ref.destroyBtn.addEventListener("click", destroyBoxes);
-ref.inputValue.addEventListener("input", getInputValue);
+refs.createBtn.addEventListener("click", createBoxes);
+refs.destroyBtn.addEventListener("click", destroyBoxes);
+refs.inputValue.addEventListener("input", getInputValue);
 
 function createBoxes(amount) {
   amount = getInputValue();
@@ -16,16 +16,16 @@ function createBoxes(amount) {
     const boxSize = basicBoxSize + i * 10;
     const createDivEl = document.createElement("div");
     createDivEl.style.cssText = `width: ${boxSize}px; height: ${boxSize}px; background-color: ${getRandomHexColor()} `;
-    ref.boxesEl.append(createDivEl);
+    refs.boxesEl.append(createDivEl);
   }
 }
 
 function destroyBoxes() {
-  ref.boxesEl.innerHTML = "";
+  refs.boxesEl.innerHTML = "";
 }
 
 function getInputValue() {
-  return ref.inputValue.value;
+  return refs.inputValue.value;
 }
 
 function getRandomHexColor() {

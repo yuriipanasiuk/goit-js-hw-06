@@ -9,18 +9,18 @@ const counter = {
     this.counterValue -= 1;
   },
 };
-const ref = {
+const refs = {
   decrementBTN: document.querySelector('[data-action="decrement"]'),
   incrementBtn: document.querySelector('[data-action="increment"]'),
   value: document.querySelector("#value"),
 };
 
-ref.decrementBTN.addEventListener("click", () => {
+refs.decrementBTN.addEventListener("click", () => {
   counter.decrement();
   value.textContent = counter.counterValue;
 });
 
-ref.incrementBtn.addEventListener("click", () => {
+refs.incrementBtn.addEventListener("click", () => {
   counter.increment();
   value.textContent = counter.counterValue;
 });
