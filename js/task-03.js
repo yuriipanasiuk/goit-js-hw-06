@@ -15,12 +15,12 @@ const images = [
 
 const listRef = document.querySelector(".gallery");
 
-const makeGalery = (options) => {
-  return options.map((option) => {
+const makeGalery = (element) => {
+  return element.map((el) => {
     const createLi = document.createElement("li");
     createLi.insertAdjacentHTML(
       "afterbegin",
-      `<img src="${option.url}" alt="${option.alt}">`
+      `<img src="${el.url}" alt="${el.alt}">`
     );
     return createLi;
   });

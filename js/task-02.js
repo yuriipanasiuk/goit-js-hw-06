@@ -9,10 +9,11 @@ const ingredients = [
 
 const listRef = document.querySelector("#ingredients");
 
-const createItemRef = (options) => {
-  return options.map((option) => {
+const createItemRef = (element) => {
+  return element.map((el) => {
+    console.log(el);
     const createLi = document.createElement("li");
-    createLi.textContent = option;
+    createLi.textContent = el;
     createLi.classList.add("item");
     return createLi;
   });
