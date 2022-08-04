@@ -11,7 +11,6 @@ const listRef = document.querySelector("#ingredients");
 
 const createItemRef = (element) => {
   return element.map((el) => {
-    console.log(el);
     const createLi = document.createElement("li");
     createLi.textContent = el;
     createLi.classList.add("item");

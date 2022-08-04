@@ -6,15 +6,11 @@ const refs = {
 
 refs.button.addEventListener("click", changeBgColor);
 
-// function changeBgColor() {
-//   refs.body.style.backgroundColor = getRandomHexColor();
-//   refs.span.textContent = getRandomHexColor();
-// }
-
-// function getRandomHexColor() {
-//   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-// }
-
 function changeBgColor() {
-  refs.body.style.background = "#ea4134";
+  refs.span.textContent = getRandomHexColor();
+  refs.body.style.backgroundColor = refs.span.textContent;
+}
+
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
